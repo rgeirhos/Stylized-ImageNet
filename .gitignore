@@ -1,3 +1,14 @@
+# image directories (paintings etc)
+code/paintings_raw/
+code/paintings_excluded/
+code/paintings_preprocessed/
+
+
+# model definitions & weights
+code/models/*.t7
+code/models/*.pth
+code/models/*.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
