@@ -27,8 +27,6 @@ import adain
 # purpuse of this file:
 # preprocess complete ImageNet (train + val) with AdaIN style
 # transfer to speed-up later training.
-# It should be started with the command <make start_preprocessing>
-# (see Makefile)
 #####################################################################
 
 parser = argparse.ArgumentParser(description='Preprocess ImageNet to create Stylized-ImageNet')
