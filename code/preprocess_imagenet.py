@@ -124,11 +124,13 @@ def main():
     #         PREPROCESS DATASETS
     #############################################################
 
+    print("Preprocessing validation data:")
     preprocess(data_loader = val_loader,
                input_transforms = [style_transfer],
                sourcedir = valdir,
                targetdir = os.path.join(g.STYLIZED_IMAGENET_PATH, "val/"))
 
+    print("Preprocessing training data:")
     preprocess(data_loader = train_loader,
                input_transforms = [style_transfer],
                sourcedir = traindir,
