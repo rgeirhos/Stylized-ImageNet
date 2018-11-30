@@ -18,5 +18,22 @@ As you can see, local textures are heavily distorted, while global object shapes
 ## Docker image
 We provide a docker image so that you don't have to install all of the libraries yourself here: [https://hub.docker.com/r/bethgelab/deeplearning/](https://hub.docker.com/r/bethgelab/deeplearning/). The repo is tested with ``bethgelab/deeplearning:cuda9.0-cudnn7``.
 
+## CNNs pre-trained on Stylized-ImageNet
+We provide CNNs that are trained on Stylized-ImageNet at [rgeirhos:texture-vs-shape](https://github.com/rgeirhos/texture-vs-shape).
+
 ## Credit
 The code itself heavily relies on the [pytorch-AdaIN github repository](https://github.com/naoto0804/pytorch-AdaIN) by Naoto Inoue (naoto0804), which is a PyTorch implementation of the AdaIN style transfer approach by X. Huang and S. Belongie, "Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization", published at ICCV 2017. In fact, the entire AdaIN implementation is taken from this repository; in order to enable anyone to create Stylized-ImageNet with as little additional effort as possible we here make everything available in one repository (preprocessing, style transfer, etc.).
+
+If you find Stylized-ImageNet useful for your work, please consider citing it:
+```
+  @article{geirhos2018,
+    title={ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness},
+    author={Geirhos, Robert and Rubisch, Patricia and Michaelis, Claudio and Bethge, Matthias and Wichmann, Felix A and Brendel, Wieland},
+    journal={arXiv preprint arXiv:1808.08750},
+    year={2018},
+    url={http://arxiv.org/abs/1808.08750},
+    archivePrefix={arXiv},
+    eprint={1808.08750},
+  }
+```
+
