@@ -29,11 +29,11 @@ If you find Stylized-ImageNet useful for your work, please consider citing it:
   @article{geirhos2018,
     title={ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness},
     author={Geirhos, Robert and Rubisch, Patricia and Michaelis, Claudio and Bethge, Matthias and Wichmann, Felix A and Brendel, Wieland},
-    journal={arXiv preprint arXiv:1808.08750},
+    journal={arXiv preprint arXiv:1811.12231},
     year={2018},
-    url={http://arxiv.org/abs/1808.08750},
+    url={http://arxiv.org/abs/1811.12231},
     archivePrefix={arXiv},
-    eprint={1808.08750},
+    eprint={1811.12231},
   }
 ```
 
