@@ -27,8 +27,6 @@ import adain
 # purpuse of this file:
 # preprocess complete ImageNet (train + val) with AdaIN style
 # transfer to speed-up later training.
-# It should be started with the command <make start_preprocessing>
-# (see Makefile)
 #####################################################################
 
 parser = argparse.ArgumentParser(description='Preprocess ImageNet to create Stylized-ImageNet')
@@ -124,11 +122,13 @@ def main():
     #         PREPROCESS DATASETS
     #############################################################
 
+    print("Preprocessing validation data:")
     preprocess(data_loader = val_loader,
                input_transforms = [style_transfer],
                sourcedir = valdir,
                targetdir = os.path.join(g.STYLIZED_IMAGENET_PATH, "val/"))
 
+    print("Preprocessing training data:")
     preprocess(data_loader = train_loader,
                input_transforms = [style_transfer],
                sourcedir = traindir,
