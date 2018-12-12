@@ -21,6 +21,10 @@ We provide a docker image so that you don't have to install all of the libraries
 ## CNNs pre-trained on Stylized-ImageNet
 We provide CNNs that are trained on Stylized-ImageNet at [rgeirhos:texture-vs-shape](https://github.com/rgeirhos/texture-vs-shape).
 
+## Training details
+
+ImageNet images are typically normalized using the standard ImageNet mean and std parameters when training a model. Stylized-ImageNet can be used as a drop-in replacement for ImageNet during training, i.e. the results in our paper are based on identical normalization as for ImageNet images. More specifically, we use ImageNet mean and std for both datasets when training; with mean and std parameters taken from the [PyTorch ImageNet example training script](https://github.com/pytorch/examples/tree/master/imagenet).
+
 ## Credit
 The code itself heavily relies on the [pytorch-AdaIN github repository](https://github.com/naoto0804/pytorch-AdaIN) by Naoto Inoue (naoto0804), which is a PyTorch implementation of the AdaIN style transfer approach by X. Huang and S. Belongie, "Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization", published at ICCV 2017. In fact, the entire AdaIN implementation is taken from this repository; in order to enable anyone to create Stylized-ImageNet with as little additional effort as possible we here make everything available in one repository (preprocessing, style transfer, etc.).
 
