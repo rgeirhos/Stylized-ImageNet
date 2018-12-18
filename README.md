@@ -5,7 +5,7 @@ This repository contains information and code on how to create Stylized-ImageNet
 Please don't hesitate to contact me at robert.geirhos@bethgelab.org or open an issue in case there is any question!
 
 ## Example images
-Here are a few examples of how different stylization of the same ImageNet image can look like:
+Here are a few examples of how different stylizations of the same ImageNet image can look like:
 ![](./example_imgs/example_stylization_imgs.png) 
 As you can see, local textures are heavily distorted, while global object shapes remain (more or less) intact during stylization. This makes Stylized-ImageNet an effective dataset to nudge CNNs towards learning more about shapes, and less about local textures.
 
