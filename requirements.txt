@@ -1,6 +1,5 @@
 torchvision==0.2.2
 numpy==1.16.2
 torch==0.4.1
-tqdm==4.32.2
 Pillow==6.1.0
 tensorboardX==1.8
