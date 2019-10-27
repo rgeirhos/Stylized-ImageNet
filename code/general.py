@@ -13,8 +13,8 @@ from os.path import join as pjoin
 ###########################################################
 
 # TODO Dear user, please change these paths:
-IMAGENET_PATH = "/gpfs01/bethge/data/imagenet-raw/raw-data/" # TODO specify ImageNet path
-STYLIZED_IMAGENET_PATH = "/gpfs01/bethge/data/imagenet-styletransfer-v2/" # TODO specify target path: where should Stylized-ImageNet be stored?
+IMAGENET_PATH = "../data/" # TODO specify ImageNet path
+STYLIZED_IMAGENET_PATH = "../datanew/" # TODO specify target path: where should Stylized-ImageNet be stored?
 
 
 ###########################################################

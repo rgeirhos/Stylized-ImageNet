@@ -51,26 +51,25 @@ def main():
     #         START STYLE TRANSFER SETUP
     #############################################################
 
-    style_dir = g.ADAIN_PREPROCESSED_PAINTINGS_DIR
-    assert len(os.listdir(style_dir)) == 79395
+   # style_dir = g.ADAIN_PREPROCESSED_PAINTINGS_DIR
+   # assert len(os.listdir(style_dir)) == 79395
 
     do_style_preprocessing = False
-    num_styles = len(os.listdir(style_dir))
-    print("=> Using "+str(num_styles)+" different style images.")
-    all_styles = [[] for _ in range(num_styles)]
-    for i, name in enumerate(sorted(os.listdir(style_dir))):
-        all_styles[i] = os.path.join(style_dir, name)
+   # num_styles = len(os.listdir(style_dir))
+   # print("=> Using "+str(num_styles)+" different style images.")
+   # all_styles = [[] for _ in range(num_styles)]
+   # for i, name in enumerate(sorted(os.listdir(style_dir))):
+   #     all_styles[i] = os.path.join(style_dir, name)
 
     transfer_args = g.get_default_adain_args()
-    transferer = adain.AdaIN(transfer_args)
+    transferer = adain.SmoothMe(transfer_args)
     print("=> Succesfully loaded style transfer algorithm.")
 
-    style_loader = adain.StyleLoader(style_transferer = transferer,
-                                     style_img_file_list = all_styles,
+    smooth_loader = adain.SmoothLoader(smooth_transferer = transferer,
                                      rng = np.random.RandomState(seed=49809),
                                      do_preprocessing = do_style_preprocessing)
 
-    style_transfer = style_loader.get_style_tensor_function
+    smooth_transfer = smooth_loader.get_style_tensor_function
     print("=> Succesfully created style loader.")
 
     #############################################################
@@ -124,13 +123,13 @@ def main():
 
     print("Preprocessing validation data:")
     preprocess(data_loader = val_loader,
-               input_transforms = [style_transfer],
+               input_transforms = [smooth_transfer],
                sourcedir = valdir,
                targetdir = os.path.join(g.STYLIZED_IMAGENET_PATH, "val/"))
 
     print("Preprocessing training data:")
     preprocess(data_loader = train_loader,
-               input_transforms = [style_transfer],
+               input_transforms = [smooth_transfer],
                sourcedir = traindir,
                targetdir = os.path.join(g.STYLIZED_IMAGENET_PATH, "train/"))
 
