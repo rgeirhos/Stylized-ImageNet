@@ -1,3 +1,7 @@
+### :tada: Update (Aug 2021):
+Interested to see how well your model copes with challenging stylized images? Check out the comprehensive toolbox at [bethgelab:model-vs-human](https://github.com/bethgelab/model-vs-human), which supports stylized data (complete with human comparison data) and comes with code to evaluate arbitrary PyTorch / TensorFlow models. Simply load your favourite model(s), hit run and get a full PDF report on out-of-distribution generalisation behaviour including ready-to-use figures!
+
+
 # Stylized-ImageNet
 
 This repository contains information and code on how to create Stylized-ImageNet, a stylized version of ImageNet that can be used to induce a shape bias in CNNs as reported in our paper [ImageNet-trained CNNs are biased towards texture; increasing shape bias improves accuracy and robustness](https://openreview.net/forum?id=Bygh9j09KX) by Robert Geirhos, Patricia Rubisch, Claudio Michaelis, Matthias Bethge, Felix A. Wichmann, and Wieland Brendel. We hope that you may find this repository a useful resource for your own research. Note that all code, data and materials concerning this paper are available in a separate repository, namely [rgeirhos:texture-vs-shape](https://github.com/rgeirhos/texture-vs-shape).
