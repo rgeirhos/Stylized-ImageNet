@@ -32,6 +32,9 @@ ImageNet images are typically normalized using the standard ImageNet mean and st
 ## Stylize arbitrary datasets
 This repository is tailored to creating a stylized version of ImageNet. Should you be interested in stylizing a different dataset, I recommend using this code: [https://github.com/bethgelab/stylize-datasets](https://github.com/bethgelab/stylize-datasets) which stylizes arbitrary image datasets.
 
+## FAQ: Can you share the dataset directly (e.g. via a download link)?
+Unfortunately not, but you can either stylize the dataset yourself (see above), find someone at your institution that has already done this, or use the 16-class version ``stylized'' from [bethgelab:model-vs-human](https://github.com/bethgelab/model-vs-human) as a proxy where the dataset can be downloaded via the toolbox or directly from [here](https://github.com/bethgelab/model-vs-human/releases/tag/v0.1).
+
 ## Credit
 The code itself heavily relies on the [pytorch-AdaIN github repository](https://github.com/naoto0804/pytorch-AdaIN) by Naoto Inoue (naoto0804), which is a PyTorch implementation of the AdaIN style transfer approach by X. Huang and S. Belongie, "Arbitrary Style Transfer in Real-time with Adaptive Instance Normalization", published at ICCV 2017. In fact, the entire AdaIN implementation is taken from this repository; in order to enable anyone to create Stylized-ImageNet with as little additional effort as possible we here make everything available in one repository (preprocessing, style transfer, etc.).
 
