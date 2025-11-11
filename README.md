@@ -19,6 +19,8 @@ As you can see, local textures are heavily distorted, while global object shapes
 3. go to ``code/`` and execute ``create_stylized_imagenet.sh`` (assuming access to a GPU). The easiest way for doing this is to the docker image that we provide (see Section below). This creates Stylized-ImageNet in the directory that you specified in step 2.
 4. Optionally, delete ``paintings_raw/``, ``paintings_excluded/`` and ``paintings_preprocessed/`` which are no longer needed.
 
+Note: in case of issues, consider using https://github.com/bethgelab/stylize-datasets instead which provides a similar functionality but is more general.
+
 ## Docker image
 We provide a docker image so that you don't have to install all of the libraries yourself here: [https://hub.docker.com/r/bethgelab/deeplearning/](https://hub.docker.com/r/bethgelab/deeplearning/). The repo is tested with ``bethgelab/deeplearning:cuda9.0-cudnn7``.
 
@@ -40,13 +42,12 @@ The code itself heavily relies on the [pytorch-AdaIN github repository](https://
 
 If you find Stylized-ImageNet useful for your work, please consider citing it:
 ```
-@inproceedings{
-geirhos2018,
-title={ImageNet-trained {CNN}s are biased towards texture; increasing shape bias improves accuracy and robustness.},
-author={Robert Geirhos and Patricia Rubisch and Claudio Michaelis and Matthias Bethge and Felix A Wichmann and Wieland Brendel},
-booktitle={International Conference on Learning Representations},
-year={2019},
-url={https://openreview.net/forum?id=Bygh9j09KX},
+@inproceedings{geirhos2019,
+  title={ImageNet-trained {CNN}s are biased towards texture; increasing shape bias improves accuracy and robustness.},
+  author={Robert Geirhos and Patricia Rubisch and Claudio Michaelis and Matthias Bethge and Felix A Wichmann and Wieland Brendel},
+  booktitle={International Conference on Learning Representations},
+  year={2019},
+  url={https://openreview.net/forum?id=Bygh9j09KX},
 }
 ```
 
